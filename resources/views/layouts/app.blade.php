@@ -39,7 +39,7 @@
     <!-- <hello-world-component></hello-world-component>
   </div> -->
 
-
+@section('content')
   <div id="app">
     <nav class="navbar">
       <div class="container">
@@ -86,10 +86,12 @@
               </div>
             </li>
           </ul>
-
         </div>
       </div>
     </nav>
+    <main class="py-4">
+      <!-- @yield('content') -->
+    </main>
 
   
     <div class="test">
@@ -107,7 +109,7 @@
       <a href="https://github.com/laravel/laravel"><button class='btn btn-primary'>GitHub</button></a>
     </div>
   </div>
-
+@Show
 
   <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
