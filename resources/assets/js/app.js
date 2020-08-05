@@ -1,12 +1,15 @@
 require('./bootstrap');
 
-import Vue from 'vue'
+// import Vue from 'vue'
 
-new Vue({
-  el: '#app',
-  template: '<h1>Hello world</h1>'
+// new Vue({
+//   el: '#app',
+//   template: '<h1>Hello world</h1>'
+// })
+
+
 // template: '<div class="test">Hello world</div>'
-})
+
 
 // import MyComponent from '../my-component.vue';
 
