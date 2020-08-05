@@ -49,9 +49,16 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse">
+        <!-- Left Side Of Navbar -->
         <ul class="navbar-nav mr-auto">
 
         </ul>
+        <!-- Right Side Of Navbar -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Authentication Links -->
+          ゲスト
+        </ul>
+
       </div>
     </nav>
 
