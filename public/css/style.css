@@ -25,6 +25,10 @@ nav {
   height: 50px;
 }
 
+.collapse .navbar-nav li {
+  list-style: none;
+}
+
 .collapse .mr-auto {
   background-color: mediumturquoise;
 }

@@ -57,6 +57,18 @@
         <ul class="navbar-nav ml-auto">
           <!-- Authentication Links -->
           ゲスト
+        
+          <li class="nav-item">    
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url('/') }}">User</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url('/') }}">Post</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url('/') }}">Login</a>
+          </li>
+          register
         </ul>
 
       </div>
