@@ -13,20 +13,24 @@
   <!-- <link rel="stylesheet" href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css"> -->
   
   <!-- Styles -->
-  <style>
+  <!-- <style>
     html, body {
       background-color: lightgreen;
       color: gray;
     }
-  </style>
+  </style> -->
 
 
   <!-- <link rel="stylesheet" href="https://hypertext-candy.s3-ap-northeast-1.amazonaws.com/posts/vue-laravel-tutorial/app.css"> -->
   {{-- CSS --}}
+  <!-- <link href="{{ asset('../assets/sass/style.scss') }}" rel="stylesheet">
+  <link href="{{ asset('sass/style.scss') }}" rel="stylesheet"> -->
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   
 </head>
 <body>
-  <div id="app"></div>
+  <!-- <div id="app"></div> -->
 
   <!-- <div id="example">
     <my-component></my-component>
@@ -41,6 +45,21 @@
     <!-- 呼び出しを作成したコンポーネントへ変更する -->
     <!-- <hello-world-component></hello-world-component>
   </div> -->
+
+  <div class="test">
+    Hellow World
+  </div>
+
+  <div class="links">
+    <a href="https://laravel.com/docs"><button class='btn btn-default'>Docs</button></a>
+    <a href="https://laracasts.com"><button class='btn btn-primary'>Laracasts</button></a>
+    <a href="https://laravel-news.com"><button class='btn btn-success'>News</button></a>
+    <a href="https://blog.laravel.com"><button class='btn btn-info'>Blog</button></a>
+    <a href="https://nova.laravel.com"><button class='btn btn-warning'>Nova</button></a>
+    <a href="https://forge.laravel.com"><button class='btn btn-danger'>Forge</button></a>
+    <a href="https://vapor.laravel.com"><button class='btn btn-link'>Vapor</button></a>
+    <a href="https://github.com/laravel/laravel"><button class='btn btn-primary'>GitHub</button></a>
+  </div>
 
 
   <script src="{{ mix('js/app.js') }}" defer></script>
