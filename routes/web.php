@@ -1,10 +1,7 @@
 <?php
 
-// use Illuminate\Support\Facades\Route;
 
-// APIのURL以外のリクエストに対してはindexテンプレートを返す
-// 画面遷移はフロントエンドのVueRouterが制御する
-Route::get('/{any?}', fn() => view('index'))->where('any', '.+');
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +16,19 @@ Route::get('/{any?}', fn() => view('index'))->where('any', '.+');
 
 // Route::get('/', function () {
 //     return view('welcome');
+// });
+
+// APIのURL以外のリクエストに対してはindexテンプレートを返す
+// 画面遷移はフロントエンドのVueRouterが制御する
+// Route::get('/{any?}', fn() => view('index'))->where('any', '.+');
+// Route::get('/{any?}', function() {
+//   return view('index')->where('any', '.+');
+// });
+
+Route::get('/', function () {
+  return view('index');
+});
+
+// Route::get('/', function () {
+//   return 'Hello World';
 // });
