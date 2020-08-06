@@ -32,6 +32,3 @@ Route::get('/', function () {
 // Route::get('/', function () {
 //   return 'Hello World';
 // });
-
-postgres=# CREATE DATABASE sample;
-postgres=# \q
