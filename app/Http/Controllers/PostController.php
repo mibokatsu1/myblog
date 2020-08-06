@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// Eloquent用
+use App\Post;
+
+// Validator用
+use Validator;
+
 class PostController extends Controller
 {
     /**
@@ -13,7 +19,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $items = Post::all();
+        return view('post.index', ['items' => $items]); // ビューの描画
     }
 
     /**
