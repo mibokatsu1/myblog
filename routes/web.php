@@ -26,6 +26,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::resource('/post', 'PostController');
+Route::get('/test', function () {
+  return view('test.test');
+});
 // Route::get('/', 'PostController@index')->name('post.index');
 // Route::post('post', 'PostController@store')->name('post.store'); // 保存
 // Route::get('post/create', 'PostController@create')->name('post.create'); // 作成
