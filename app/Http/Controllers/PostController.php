@@ -19,7 +19,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $items = Post::all();
+        // $items = Post::all();
+        $items = Post::orderBy('id', 'desc')->get();
         return view('post.index', ['items' => $items]); // ビューの描画
     }
 
@@ -41,7 +42,35 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post;
+        $form = $request->all();
+
+        // バリデーション
+        $rules = [
+            'user_id' => 'integer|required', // 2項目以上条件がある場合は「 | 」を挟む
+            'title' => 'required',
+            'message' => 'required',
+        ];
+        $message = [
+            'user_id.integer' => 'System Error',
+            'user_id.required' => 'System Error',
+            'title.required'=> 'タイトルが入力されていません',
+            'message.required'=> 'メッセージが入力されていません'
+        ];
+        $validator = Validator::make($form, $rules, $message);
+
+        if($validator->fails()){
+            return redirect('/post')
+                ->withErrors($validator)
+                ->withInput();
+        }else{
+            unset($form['_token']);
+            $post->user_id = $request->user_id;
+            $post->title = $request->title;
+            $post->message = $request->message;
+            $post->save();
+            return redirect('/post');
+        }
     }
 
     /**
@@ -52,7 +81,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $item = Post::find($id);
+        return view('post.show', ['item' => $item]);
     }
 
     /**
@@ -86,6 +116,7 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $items = Post::find($id)->delete();
+        return redirect('/post');
     }
 }
