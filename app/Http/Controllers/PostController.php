@@ -50,6 +50,13 @@ class PostController extends Controller
             'title' => 'required',
             'message' => 'required',
         ];
+        $message = [
+            'user_id.integer' => 'System Error',
+            'user_id.required' => 'System Error',
+            'title.required'=> 'タイトルが入力されていません',
+            'message.required'=> 'メッセージが入力されていません'
+        ];
+        $validator = Validator::make($form, $rules, $message);
     }
 
     /**
