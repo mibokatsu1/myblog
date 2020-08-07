@@ -57,6 +57,19 @@ class PostController extends Controller
             'message.required'=> 'メッセージが入力されていません'
         ];
         $validator = Validator::make($form, $rules, $message);
+
+        if($validator->fails()){
+            return redirect('/post')
+                ->withErrors($validator)
+                ->withInput();
+        }else{
+            unset($form['_token']);
+            $post->user_id = $request->user_id;
+            $post->title = $request->title;
+            $post->message = $request->message;
+            $post->save();
+            return redirect('/post');
+        }
     }
 
     /**
