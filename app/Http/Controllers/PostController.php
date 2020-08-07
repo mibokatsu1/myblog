@@ -19,7 +19,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $items = Post::all();
+        // $items = Post::all();
+        $items = Post::orderBy('id', 'desc')->get();
         return view('post.index', ['items' => $items]); // ビューの描画
     }
 
