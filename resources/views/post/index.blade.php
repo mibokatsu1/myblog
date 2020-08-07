@@ -94,12 +94,13 @@
     </main>
 
     <!-- 投稿フォーム -->
-    <form action="/post" method="post">
-        <input type="text" class="form" name="title" placeholder="タイトル" value="{{ old('title') }}">
-        <div>
-            <textarea class="form" name="message" placeholder="メッセージ"></textarea>
-        </div>
-        <input type="submit" class="create" value="投  稿">
+    <form action="post" method="post">
+      @csrf
+      <input type="text" class="form" name="title" placeholder="タイトル" value="{{ old('title') }}">
+      <div>
+          <textarea class="form" name="message" placeholder="メッセージ">{{ old('message') }}</textarea>
+      </div>
+      <input type="submit" class="create" value="投  稿">
     </form>
 
     <div class="test">

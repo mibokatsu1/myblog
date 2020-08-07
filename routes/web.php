@@ -25,8 +25,9 @@ use Illuminate\Support\Facades\Route;
 //   return view('index')->where('any', '.+');
 // });
 
-Route::get('/', 'PostController@index')->name('post.index');
-Route::post('post', 'PostController@store')->name('post.store'); // 保存
+Route::resource('/post', 'PostController');
+// Route::get('/', 'PostController@index')->name('post.index');
+// Route::post('post', 'PostController@store')->name('post.store'); // 保存
 
 // Route::get('/', function () {
 //     return view('layouts.app');
