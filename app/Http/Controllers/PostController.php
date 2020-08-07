@@ -43,6 +43,13 @@ class PostController extends Controller
     {
         $post = new Post;
         $form = $request->all();
+
+        // バリデーション
+        $rules = [
+            'user_id' => 'integer|required', // 2項目以上条件がある場合は「 | 」を挟む
+            'title' => 'required',
+            'message' => 'required',
+        ];
     }
 
     /**
