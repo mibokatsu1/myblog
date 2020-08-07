@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'PostController@index')->name('post.index');
+Route::post('post', 'PostController@store')->name('post.store'); // 保存
 
 // Route::get('/', function () {
 //     return view('layouts.app');
