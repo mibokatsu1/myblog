@@ -25,9 +25,11 @@ use Illuminate\Support\Facades\Route;
 //   return view('index')->where('any', '.+');
 // });
 
-Route::get('/', function () {
-    return view('layouts.app');
-});
+Route::get('/', 'PostController@index')->name('post.index');
+
+// Route::get('/', function () {
+//     return view('layouts.app');
+// });
 
 // Route::get('/', function () {
 //   return 'Hello World';
