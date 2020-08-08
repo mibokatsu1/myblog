@@ -26,9 +26,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::resource('/post', 'PostController');
+
+// testビューにて@sectionの挙動確認
 Route::get('/test', function () {
   return view('test.test_child');
 });
+
+// resourceにまとめる前のCRUD機能
 // Route::get('/', 'PostController@index')->name('post.index');
 // Route::post('post', 'PostController@store')->name('post.store'); // 保存
 // Route::get('post/create', 'PostController@create')->name('post.create'); // 作成
