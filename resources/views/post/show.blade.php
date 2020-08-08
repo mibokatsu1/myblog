@@ -1,14 +1,18 @@
-@if($item !== '')
-    <div class="headcopy">Title</div><hr>
-    <div class="text">{{ $item->title }}</div>
+@extends('layouts.app')
+@section('title', '記事詳細ページ')
 
-    <div class="headcopy">Message</div><hr>
-    <div class="text">{{ $item->message }}</div>
-@endif
+@section('content')
+    @if($item !== '')
+        <div class="headcopy">Title</div><hr>
+        <div class="text">{{ $item->title }}</div>
+
+        <div class="headcopy">Message</div><hr>
+        <div class="text">{{ $item->message }}</div>
+    @endif
 
 
-<div class="test">
-      Hellow World
+    <div class="test">
+        Hellow World
     </div>
 
     <div class="links">
@@ -22,3 +26,4 @@
       <a href="https://github.com/laravel/laravel"><button class='btn btn-primary'>GitHub</button></a>
     </div>
   </div>
+@endsection

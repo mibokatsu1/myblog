@@ -1,7 +1,27 @@
 @extends('layouts.app')
-@section('title', '詳細記事')
+<!-- タイトルはデフォルトと同じ -->
+<!-- @section('title', 'トップページ') -->
 
 @section('content')
+    <!-- 投稿フォーム -->
+    <form action="post" method="post">
+        @csrf
+
+        <input type="hidden" name="user_id" value="1">
+        @if($errors->has('title'))
+          <div class="error_msg">{{ $errors->first('title') }}</div>
+        @endif
+        <input type="text" class="form" name="title" placeholder="タイトル" value="{{ old('title') }}">
+
+        @if($errors->has('message'))
+          <div class="error_msg">{{ $errors->first('message') }}</div>
+        @endif
+        <div>
+            <textarea class="form" name="message" placeholder="メッセージ">{{ old('message') }}</textarea>
+        </div>
+        <input type="submit" class="create" value="投  稿">
+    </form>
+
     <!-- 記事描画部分 -->
     @if(count($items) > 0)
     @foreach($items as $item)

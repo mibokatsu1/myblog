@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ config('app.name') }}</title>
+  <title>{{ config('app.name') }} | @yield('title', 'トップページ')</title>
 
   <!-- Scripts -->
   
@@ -93,25 +93,6 @@
         @yield('content')
     </main>
   </div>
-
-    <!-- 投稿フォーム -->
-    <form action="post" method="post">
-        @csrf
-
-        <input type="hidden" name="user_id" value="1">
-        @if($errors->has('title'))
-          <div class="error_msg">{{ $errors->first('title') }}</div>
-        @endif
-        <input type="text" class="form" name="title" placeholder="タイトル" value="{{ old('title') }}">
-
-        @if($errors->has('message'))
-          <div class="error_msg">{{ $errors->first('message') }}</div>
-        @endif
-        <div>
-            <textarea class="form" name="message" placeholder="メッセージ">{{ old('message') }}</textarea>
-        </div>
-        <input type="submit" class="create" value="投  稿">
-    </form>
 
   <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
