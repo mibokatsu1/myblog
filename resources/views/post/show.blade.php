@@ -10,4 +10,5 @@
         <div class="text">{{ $item->message }}</div>
     @endif
 
+    <a href="/post" class="edit">編集する</a>
 @endsection
