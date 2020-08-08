@@ -199,3 +199,84 @@ img.add:hover {
   font-size: 15px;
   margin: 10px 0 20px 0;
 }
+
+
+// 以下追加
+
+.topWrapper {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.thumbnail {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.editThumbnail {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.buttonSet {
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+
+.labelTitle {
+  color: #006DD9;
+  margin: 20px 0 5px 0;
+}
+
+input[class="userForm"],
+.userForm {
+  width: 100%;
+  padding: 5px 0 5px 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  transition: 1s;
+}
+input[class="userForm"]:focus,
+.userForm:focus {
+  background: #87ceeb;
+}
+
+.postBtn {
+  width: 30%;
+  height: 40px;
+  margin: 0 0 40px 0;
+}
+
+.btn-done {
+  background: #dc143c;
+  border: 1px solid #dc143c;
+}
+.btn-done:hover {
+  background: #cc1237;
+  border: 1px solid #cc1237;
+}
+
+.deleteIcon {
+  color: #006DD9;
+  font-size: 20px;
+  border: none;
+  background: none;
+}
+
+.error_msg {
+  font-size: 15px;
+  font-weight: 100;
+  color: #cc1237;
+}
+
+.itemAlert {
+  display: flex;
+}
+
+.comment {
+  width: 95%;
+}

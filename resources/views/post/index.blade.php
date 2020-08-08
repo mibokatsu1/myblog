@@ -4,34 +4,51 @@
 
 @section('content')
 <div class="container">
-
     <div class="row justify-content-center">
         <div class="col-md-8">
-
             <div class="card">
                 <div class="card-header">新しい記事を投稿してください</div>
-
                 <div class="card-body">
 
                     <!-- 投稿フォーム -->
-                    <form action="post" method="post">
+                    <form action="/post" method="post">
                         @csrf
 
                         <!-- 認証ユーザーのid取得 -->
                         <input type="hidden" name="user_id" value="{{ $authUser->id }}">
                         <!-- <input type="hidden" name="user_id" value="1">  ユーザー登録機能実装前、仮置き -->
-                        @if($errors->has('title'))
+
+                        <!-- @if($errors->has('title'))
                             <div class="error_msg">{{ $errors->first('title') }}</div>
                         @endif
-                        <input type="text" class="form" name="title" placeholder="タイトル" value="{{ old('title') }}">
+                        <input type="text" class="form" name="title" placeholder="タイトル" value="{{ old('title') }}"> -->
+                        <div class="">
+                            <div class="labelTitle">タイトル</div>
+                            <input id="title" type="text" class="userForm" name="title" placeholder="タイトル" value="{{ old('title') }}">
+                            @if($errors->has('title'))
+                                <div class="error_msg">{{ $errors->first('title') }}</div>
+                            @endif
+                        </div>
 
-                        @if($errors->has('message'))
+
+                        <!-- @if($errors->has('message'))
                             <div class="error_msg">{{ $errors->first('message') }}</div>
                         @endif
                         <div>
                             <textarea class="form" name="message" placeholder="メッセージ">{{ old('message') }}</textarea>
+                        </div> -->
+                        <div class="">
+                            <div class="labelTitle">メッセージ</div>
+                            <textarea id="message" class="userForm" name="message" placeholder="メッセージ">{{ old('message') }}</textarea>
+                            @if($errors->has('message'))
+                                <div class="error_msg">{{ $errors->first('message') }}</div>
+                            @endif
                         </div>
-                        <input type="submit" class="create" value="投  稿">
+
+                        <!-- <input type="submit" class="create" value="投  稿"> -->
+                        <div class="buttonSet">
+                            <input type="submit" class="btn btn-primary btn-sm postBtn" value="投稿する">
+                        </div>
                     </form>
 
                     <!-- 記事描画部分 -->
