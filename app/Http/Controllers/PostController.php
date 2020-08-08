@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 // Eloquent用
 use App\Post;
@@ -19,9 +20,17 @@ class PostController extends Controller
      */
     public function index()
     {
+        $authUser = Auth::user(); // 認証ユーザー取得
+        $items = Post::with('user')->get();
         // $items = Post::all();
-        $items = Post::orderBy('id', 'desc')->get();
-        return view('post.index', ['items' => $items]); // ビューの描画
+        // $items = Post::orderBy('id', 'desc')->get();
+
+        $params = [
+            'authUser' => $authUser,
+            'items' => $items,
+        ];
+        return view('post.index', $params); // ビューの描画
+        // return view('post.index', ['items' => $items]);
     }
 
     /**
