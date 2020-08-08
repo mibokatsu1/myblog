@@ -105,7 +105,15 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+        $form = $request->all();
+
+        unset($form['_token']);
+        $post->user_id = $request->user_id;
+        $post->title = $request->title;
+        $post->message = $request->message;
+        $post->save();
+        return redirect('/post');
     }
 
     /**

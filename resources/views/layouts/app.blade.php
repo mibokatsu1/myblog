@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ config('app.name') }}</title>
+  <title>{{ config('app.name') }} | @yield('title', 'トップページ')</title>
 
   <!-- Scripts -->
   
@@ -39,11 +39,11 @@
     <!-- <hello-world-component></hello-world-component>
   </div> -->
 
-@section('content')
+
   <div id="app">
     <nav class="navbar">
       <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand" href="{{ url('/post') }}">
           {{ config('app.name', 'Laravel') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -57,45 +57,61 @@
           <!-- Right Side Of Navbar -->
           <ul class="navbar-nav ml-auto">
             <!-- Authentication Links -->
-            ゲスト
-          
+            @guest
             <li class="nav-item">    
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/') }}">User</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/') }}">Post</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/') }}">Login</a>
-            </li>
-            register
-            <li class="nav-item dropdown">
-              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                ユーザー名
-              </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Login</a>
+                </li>
+                @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+            @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Login</a>
+                </li>
 
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ url('/') }}">
-                  ログアウト
-                </a>
 
-                <form id="logout-form" action="{{ url('#') }}" method="POST">
-                  フォーム
-                </form>
-              </div>
-            </li>
+                <li class="nav-item dropdown">
+                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    ユーザー名
+                  </a>
+
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url('/') }}">
+                      ログアウト
+                    </a>
+
+                    <form id="logout-form" action="{{ url('#') }}" method="POST">
+                        @csrf
+                    </form>
+                  </div>
+                </li>
+            @endguest
           </ul>
         </div>
       </div>
     </nav>
     <main class="py-4">
-      <!-- @yield('content') -->
+        @yield('content')
     </main>
 
-  
+    <!-- フッター -->
     <div class="test">
-      Hellow World
+        フッター
     </div>
 
     <div class="links">
@@ -109,7 +125,6 @@
       <a href="https://github.com/laravel/laravel"><button class='btn btn-primary'>GitHub</button></a>
     </div>
   </div>
-@Show
 
   <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
