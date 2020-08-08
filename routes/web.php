@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/post', 'PostController');
 Route::get('/test', function () {
-  return view('test.test');
+  return view('test.test_child');
 });
 // Route::get('/', 'PostController@index')->name('post.index');
 // Route::post('post', 'PostController@store')->name('post.store'); // 保存

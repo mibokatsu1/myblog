@@ -10,6 +10,9 @@
         @yield('content')
     </div>
 
+
+    @yield('footer')
+
     @section('footer')
         <h1>親のフッター</h1>
     @show
