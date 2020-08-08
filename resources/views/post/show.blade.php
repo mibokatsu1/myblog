@@ -2,9 +2,6 @@
 @section('title', '記事詳細ページ')
 
 @section('content')
-    <!-- 認証ユーザーのid取得 -->
-    <input type="hidden" name="user_id" value="{{ $authUser->id }}">
-
     @if($item !== '')
         <div class="headcopy">Title</div><hr>
         <div class="text">{{ $item->title }}</div>
@@ -17,7 +14,9 @@
         <form action="/post/{{$item->id}}" method="POST">
             @csrf
 
-            <input type="hidden" name="user_id" value="1">
+            <!-- 認証ユーザーのid取得 -->
+            <input type="hidden" name="user_id" value="{{ $authUser->id }}">
+            <!-- <input type="hidden" name="user_id" value="1"> -->
             <input type="text" class="form" name="title" placeholder="タイトル" value="{{ $item->title }}">
             <div>
                 <textarea class="form" name="message" placeholder="メッセージ">{{ $item->message }}</textarea>
