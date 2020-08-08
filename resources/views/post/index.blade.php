@@ -9,12 +9,12 @@
 
         <input type="hidden" name="user_id" value="1">
         @if($errors->has('title'))
-          <div class="error_msg">{{ $errors->first('title') }}</div>
+            <div class="error_msg">{{ $errors->first('title') }}</div>
         @endif
         <input type="text" class="form" name="title" placeholder="タイトル" value="{{ old('title') }}">
 
         @if($errors->has('message'))
-          <div class="error_msg">{{ $errors->first('message') }}</div>
+            <div class="error_msg">{{ $errors->first('message') }}</div>
         @endif
         <div>
             <textarea class="form" name="message" placeholder="メッセージ">{{ old('message') }}</textarea>
@@ -27,6 +27,7 @@
     @foreach($items as $item)
         <div class="alert alert-primary" role="alert">
             <a href="/post/{{ $item->id }}" class="alert-link">{{ $item->title }}</a>
+            <div class="created_at">{{ $item->created_at}}</div>
             <form action="/post/{{ $item->id }}" method="POST">
             @csrf
             <input type="hidden" name="_method" value="DELETE">
@@ -34,6 +35,7 @@
             </form>
         </div>
     @endforeach
+
     @else
         <div>投稿記事がありません</div>
     @endif
