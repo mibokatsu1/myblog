@@ -57,34 +57,50 @@
           <!-- Right Side Of Navbar -->
           <ul class="navbar-nav ml-auto">
             <!-- Authentication Links -->
-            ゲスト
-          
+            @guest
+            <li class="nav-item">    
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Login</a>
+                </li>
+                @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+            @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Login</a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/') }}">User</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/') }}">Post</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/') }}">Login</a>
-            </li>
-            register
-            <li class="nav-item dropdown">
-              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                ユーザー名
-              </a>
 
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ url('/') }}">
-                  ログアウト
-                </a>
+                <li class="nav-item dropdown">
+                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    ユーザー名
+                  </a>
 
-                <form id="logout-form" action="{{ url('#') }}" method="POST">
-                  フォーム
-                </form>
-              </div>
-            </li>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url('/') }}">
+                      ログアウト
+                    </a>
+
+                    <form id="logout-form" action="{{ url('#') }}" method="POST">
+                        @csrf
+                    </form>
+                  </div>
+                </li>
+            @endguest
           </ul>
         </div>
       </div>
