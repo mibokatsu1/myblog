@@ -52,26 +52,32 @@
                     </form>
 
                     <!-- 記事描画部分 -->
-                    @if(count($items) > 0)
-                        @foreach($items as $item)
-                            <div class="alert alert-primary" role="alert">
-                                <a href="/post/{{ $item->id }}" class="alert-link">{{ $item->title }}</a>
-                                <div class="created_at">{{ $item->created_at}}</div>
+                    <div class="createItem">
+                        @if(count($items) > 0)
+                            @foreach($items as $item)
+                                <div class="alert alert-primary" role="alert">
+                                    <div class="comment">
+                                        <a href="/post/{{ $item->id }}" class="alert-link">{{ $item->title }}</a>
+                                        <br />
+                                            {{ $item->message }}
+                                        <div class="created_at">{{ $item->created_at}}</div>
+                                    </div>
 
-                                <!-- 主キーと外部キーが同じ場合 -> リンク付きテキストと削除ボタン表示 -->
-                                @if($authUser->id === $item->user_id)
-                                <form action="/post/{{ $item->id }}" method="POST">
-                                @csrf
-                                <input type="hidden" name="_method" value="DELETE">
-                                <input type="submit" class="delete" value="削除">
-                                </form>
-                                @endif
-                            </div>
-                        @endforeach
+                                    <!-- 主キーと外部キーが同じ場合 -> リンク付きテキストと削除ボタン表示 -->
+                                    @if($authUser->id === $item->user_id)
+                                    <form action="/post/{{ $item->id }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="submit" class="delete" value="削除">
+                                    </form>
+                                    @endif
+                                </div>
+                            @endforeach
 
-                    @else
-                        <div>投稿記事がありません</div>
-                    @endif
+                        @else
+                            <div>投稿記事がありません</div>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
