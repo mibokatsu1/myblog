@@ -24,6 +24,7 @@ class PostController extends Controller
         $items = Post::with('user')->get();
         // $items = Post::all();
         // $items = Post::orderBy('id', 'desc')->get();
+        // 「Post::all();」ではN+1問題発生する
 
         $params = [
             'authUser' => $authUser,
@@ -90,8 +91,14 @@ class PostController extends Controller
      */
     public function show($id)
     {
+        $authUser = Auth::user(); // 認証ユーザー取得
         $item = Post::find($id);
-        return view('post.show', ['item' => $item]);
+        $params = [
+            'authUser' => $authUser,
+            'item' => $item,
+        ];
+        return view('post.show', $params);
+        // return view('post.show', ['item' => $item]);
     }
 
     /**
