@@ -65,15 +65,19 @@
 
                                     <!-- 主キーと外部キーが同じ場合 -> リンク付きテキストと削除ボタン表示 -->
                                     @if($authUser->id === $item->user_id)
-                                    <form action="/post/{{ $item->id }}" method="POST">
-                                    @csrf
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <input type="submit" class="delete" value="削除">
-                                    </form>
+                                    <div class="delete">
+                                        <form action="/post/{{ $item->id }}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <input type="submit" class="delete" value="削除">
+                                            <!-- <button type="submit" class="deleteIcon">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button> -->
+                                        </form>
+                                    </div>
                                     @endif
                                 </div>
                             @endforeach
-
                         @else
                             <div>投稿記事がありません</div>
                         @endif
