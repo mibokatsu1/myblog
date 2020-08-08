@@ -39,7 +39,7 @@
     <!-- <hello-world-component></hello-world-component>
   </div> -->
 
-
+@section('content')
   <div id="app">
     <nav class="navbar">
       <div class="container">
@@ -59,7 +59,7 @@
             <!-- Authentication Links -->
             ゲスト
           
-
+            <li class="nav-item">    
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/') }}">User</a>
             </li>
@@ -90,28 +90,45 @@
       </div>
     </nav>
     <main class="py-4">
-        @yield('content')
+      <!-- @yield('content') -->
     </main>
-  </div>
 
     <!-- 投稿フォーム -->
     <form action="post" method="post">
-        @csrf
+      @csrf
 
-        <input type="hidden" name="user_id" value="1">
-        @if($errors->has('title'))
-          <div class="error_msg">{{ $errors->first('title') }}</div>
-        @endif
-        <input type="text" class="form" name="title" placeholder="タイトル" value="{{ old('title') }}">
+      <input type="hidden" name="user_id" value="1">
+      @if($errors->has('title'))
+        <div class="error_msg">{{ $errors->first('title') }}</div>
+      @endif
+      <input type="text" class="form" name="title" placeholder="タイトル" value="{{ old('title') }}">
 
-        @if($errors->has('message'))
-          <div class="error_msg">{{ $errors->first('message') }}</div>
-        @endif
-        <div>
-            <textarea class="form" name="message" placeholder="メッセージ">{{ old('message') }}</textarea>
-        </div>
-        <input type="submit" class="create" value="投  稿">
+      @if($errors->has('message'))
+        <div class="error_msg">{{ $errors->first('message') }}</div>
+      @endif
+      <div>
+          <textarea class="form" name="message" placeholder="メッセージ">{{ old('message') }}</textarea>
+      </div>
+      <input type="submit" class="create" value="投  稿">
     </form>
+
+    <!-- 記事描画部分 -->
+    @if(count($items) > 0)
+    @foreach($items as $item)
+        <div class="alert alert-primary" role="alert">
+            <a href="/post/{{ $item->id }}" class="alert-link">{{ $item->title }}</a>
+            <form action="/post/{{ $item->id }}" method="POST">
+            @csrf
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" class="delete" value="削除">
+            </form>
+        </div>
+    @endforeach
+    @else
+        <div>投稿記事がありません</div>
+    @endif
+
+@Show
 
   <script src="{{ mix('js/app.js') }}" defer></script>
 </body>

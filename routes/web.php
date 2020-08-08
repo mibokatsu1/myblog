@@ -28,9 +28,14 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/post', 'PostController');
 
 // testビューにて@sectionの挙動確認
-Route::get('/test', function () {
-  return view('test.test_child');
-});
+// Route::get('/post', function () {
+//   return view('layouts.app');
+// });
+
+// testビューにて@sectionの挙動確認
+// Route::get('/test', function () {
+//   return view('test.test_child');
+// });
 
 // resourceにまとめる前のCRUD機能
 // Route::get('/', 'PostController@index')->name('post.index');
