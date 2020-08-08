@@ -25,7 +25,9 @@ use Illuminate\Support\Facades\Route;
 //   return view('index')->where('any', '.+');
 // });
 
-Route::resource('/post', 'PostController');
+// Route::resource('/post', 'PostController');
+// トップページへアクセスする時にユーザー登録の認証をつける
+Route::resource('/post', 'PostController')->middleware('auth');
 
 // testビューにて@sectionの挙動確認
 // Route::get('/post', function () {
