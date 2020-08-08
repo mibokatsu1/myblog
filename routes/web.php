@@ -45,3 +45,6 @@ Route::resource('/post', 'PostController');
 // Route::get('post/edit/{post_id}', 'PostController@edit')->name('post.edit'); // 編集
 // Route::put('post/{post_id}', 'PostController@update')->name('post.update'); // 更新
 // Route::delete('post/{post_id}', 'PostController@destroy')->name('post.destroy'); // 削除
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
