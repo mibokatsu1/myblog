@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 // Eloquent用
 use App\Post;
@@ -19,9 +20,20 @@ class PostController extends Controller
      */
     public function index()
     {
+        $authUser = Auth::user(); // 認証ユーザー取得
+        $items = Post::with('user')
+            ->orderBy('id', 'desc')
+            ->get();
         // $items = Post::all();
-        $items = Post::orderBy('id', 'desc')->get();
-        return view('post.index', ['items' => $items]); // ビューの描画
+        // $items = Post::orderBy('id', 'desc')->get();
+        // 「Post::all();」ではN+1問題発生する
+
+        $params = [
+            'authUser' => $authUser,
+            'items' => $items,
+        ];
+        return view('post.index', $params); // ビューの描画
+        // return view('post.index', ['items' => $items]);
     }
 
     /**
@@ -81,8 +93,14 @@ class PostController extends Controller
      */
     public function show($id)
     {
+        $authUser = Auth::user(); // 認証ユーザー取得
         $item = Post::find($id);
-        return view('post.show', ['item' => $item]);
+        $params = [
+            'authUser' => $authUser,
+            'item' => $item,
+        ];
+        return view('post.show', $params);
+        // return view('post.show', ['item' => $item]);
     }
 
     /**

@@ -11,15 +11,18 @@
   <!-- Fonts -->
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Roboto:400"> -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css"> -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   
   <!-- Styles -->
   <!-- <link rel="stylesheet" href="https://hypertext-candy.s3-ap-northeast-1.amazonaws.com/posts/vue-laravel-tutorial/app.css"> -->
 
   {{-- CSS --}}
-  <!-- <link href="{{ asset('../assets/sass/style.scss') }}" rel="stylesheet">
-  <link href="{{ asset('sass/style.scss') }}" rel="stylesheet"> -->
+  <!-- <link href="{{ asset('../assets/sass/style.scss') }}" rel="stylesheet"> -->
+  <!-- <link href="{{ asset('sass/style.scss') }}" rel="stylesheet"> -->
+
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <!-- <link href="{{ mix('css/style.css') }}" rel="stylesheet"> -->
   
 </head>
 <body>
@@ -41,13 +44,13 @@
 
 
   <div id="app">
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="{{ url('/post') }}">
-          {{ config('app.name', 'Laravel') }}
+            {{ config('app.name', 'Laravel') }}
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse">
           <!-- Left Side Of Navbar -->
@@ -63,7 +66,7 @@
                     <a class="nav-link" href="{{ url('/') }}">User</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Post</a>
+                    <a class="nav-link" href="{{ route('post.index') }}">Post</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}">Login</a>
@@ -78,22 +81,26 @@
                     <a class="nav-link" href="{{ url('/') }}">User</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Post</a>
+                    <a class="nav-link" href="{{ route('post.index') }}">Post</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}">Login</a>
                 </li>
 
-
                 <li class="nav-item dropdown">
                   <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    ユーザー名
+                      {{ Auth::user()->name }} <span class="caret"></span>
                   </a>
 
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ url('/') }}">
-                      ログアウト
-                    </a>
+                    @if(Auth::check())
+                      <li><a href="{{ route('user.logout') }}">ログアウト</a></li>
+                      <!-- <a class="dropdown-item" href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                          {{ __('Logout') }}
+                      </a> -->
+                    @endif
 
                     <form id="logout-form" action="{{ url('#') }}" method="POST">
                         @csrf
@@ -126,6 +133,6 @@
     </div>
   </div>
 
-  <script src="{{ mix('js/app.js') }}" defer></script>
+  <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>

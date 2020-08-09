@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// 動作確認用
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -25,14 +26,16 @@ use Illuminate\Support\Facades\Route;
 //   return view('index')->where('any', '.+');
 // });
 
-Route::resource('/post', 'PostController');
+// Route::resource('/post', 'PostController');
+// トップページへアクセスする時にユーザー登録の認証をつける
+Route::resource('/post', 'PostController')->middleware('auth');
 
-// testビューにて@sectionの挙動確認
+// testビューにて＠sectionの挙動確認
 // Route::get('/post', function () {
 //   return view('layouts.app');
 // });
 
-// testビューにて@sectionの挙動確認
+// testビューにて＠sectionの挙動確認
 // Route::get('/test', function () {
 //   return view('test.test_child');
 // });
@@ -45,3 +48,11 @@ Route::resource('/post', 'PostController');
 // Route::get('post/edit/{post_id}', 'PostController@edit')->name('post.edit'); // 編集
 // Route::put('post/{post_id}', 'PostController@update')->name('post.update'); // 更新
 // Route::delete('post/{post_id}', 'PostController@destroy')->name('post.destroy'); // 削除
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Route::post('/login', 'LoginController@login')->name('login');
+
+// Route::post('/logout', 'LoginController@logout')->name('logout');
+Route::get('/logout', 'UserController@getLogout')->name('user.logout');
