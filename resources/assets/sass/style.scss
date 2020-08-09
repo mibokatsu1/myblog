@@ -161,15 +161,15 @@ input[class=create]:hover {
   opacity: .7;
 }
 
-// input[class=delete] {
-//   font-size: 13px;
-//   font-weight: 100;
-//   color: #4169e1;
-//   margin: 5px 0 0 0;
-//   padding: 0;
-//   background: none;
-//   border: none;
-// }
+input[class=delete] {
+  font-size: 13px;
+  font-weight: 100;
+  // color: #4169e1;
+  margin: 5px 0 0 0;
+  padding: 0 3px;
+  // background: none;
+  // border: none;
+}
 
 img.add {
   width: 35px;
@@ -266,6 +266,8 @@ input[class="userForm"]:focus,
   border: none;
   background: none;
 }
+
+
 
 .error_msg {
   font-size: 15px;

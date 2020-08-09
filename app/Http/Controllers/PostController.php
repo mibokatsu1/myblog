@@ -21,9 +21,9 @@ class PostController extends Controller
     public function index()
     {
         $authUser = Auth::user(); // 認証ユーザー取得
-        $items = Post::with('user')->get();
+        // $items = Post::with('user')->get();
         // $items = Post::all();
-        // $items = Post::orderBy('id', 'desc')->get();
+        $items = Post::orderBy('id', 'desc')->get();
         // 「Post::all();」ではN+1問題発生する
 
         $params = [

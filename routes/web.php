@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// 動作確認用
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // APIのURL以外のリクエストに対してはindexテンプレートを返す
 // 画面遷移はフロントエンドのVueRouterが制御する
@@ -35,9 +36,9 @@ Route::resource('/post', 'PostController')->middleware('auth');
 // });
 
 // testビューにて＠sectionの挙動確認
-Route::get('/test', function () {
-  return view('test.test_child');
-});
+// Route::get('/test', function () {
+//   return view('test.test_child');
+// });
 
 // resourceにまとめる前のCRUD機能
 // Route::get('/', 'PostController@index')->name('post.index');

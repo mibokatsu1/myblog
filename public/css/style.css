@@ -94,6 +94,13 @@ input[class=create]:hover {
   opacity: 0.7;
 }
 
+input[class=delete] {
+  font-size: 13px;
+  font-weight: 100;
+  margin: 5px 0 0 0;
+  padding: 0 3px;
+}
+
 img.add {
   width: 35px;
   background: #fff;
