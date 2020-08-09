@@ -16,10 +16,12 @@
   <!-- <link rel="stylesheet" href="https://hypertext-candy.s3-ap-northeast-1.amazonaws.com/posts/vue-laravel-tutorial/app.css"> -->
 
   {{-- CSS --}}
-  <!-- <link href="{{ asset('../assets/sass/style.scss') }}" rel="stylesheet">
-  <link href="{{ asset('sass/style.scss') }}" rel="stylesheet"> -->
+  <!-- <link href="{{ asset('../assets/sass/style.scss') }}" rel="stylesheet"> -->
+  <!-- <link href="{{ asset('sass/style.scss') }}" rel="stylesheet"> -->
+
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <!-- <link href="{{ mix('css/style.css') }}" rel="stylesheet"> -->
   
 </head>
 <body>
@@ -125,6 +127,6 @@
     </div>
   </div>
 
-  <script src="{{ mix('js/app.js') }}" defer></script>
+  <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
