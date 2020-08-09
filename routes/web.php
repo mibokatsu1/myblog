@@ -52,4 +52,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Route::get('/login', 'HomeController@__construct')->name('login');
+
 Route::get('/logout', 'UserController@getLogout')->name('user.logout');
