@@ -69,10 +69,10 @@
                                         <form action="/post/{{ $item->id }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="_method" value="DELETE">
-                                            <input type="submit" class="delete" value="削除">
-                                            <!-- <button type="submit" class="deleteIcon">
+                                            <!-- <input type="submit" class="delete" value="削除"> -->
+                                            <button type="submit" class="deleteIcon">
                                                 <i class="fas fa-trash-alt"></i>
-                                            </button> -->
+                                            </button>
                                         </form>
                                     </div>
                                     @endif
