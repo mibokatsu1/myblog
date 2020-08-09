@@ -11,7 +11,7 @@ class UserController extends Controller
     // ログアウト遷移先変更
     public function getLogout(Request $request){
         Auth::logout();
-        // return redirect()->route('login');
-        return redirect()->route('home');
+        return redirect()->route('login');
+        // return redirect()->route('home');
     }
 }
