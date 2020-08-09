@@ -82,6 +82,9 @@
                             <div>投稿記事がありません</div>
                         @endif
                     </div>
+                    <div class="paginate">
+                        {{ $items->links() }}
+                    </div>
                 </div>
             </div>
         </div>
