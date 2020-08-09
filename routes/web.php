@@ -51,3 +51,5 @@ Route::resource('/post', 'PostController')->middleware('auth');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/logout', 'UserController@getLogout')->name('user.logout');

@@ -1,14 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@if(Auth::check())
-<!--認証中なら-->
-<a href="{{ route('user.logout') }}" class="add" alt="ログアウト">ログアウト</a>
-@else
-<!--未認証なら-->
-<a href="{{route('register')}}" class="add" alt="ユーザー登録">ユーザー登録</a>
-@endif
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
