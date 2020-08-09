@@ -66,7 +66,7 @@
                     <a class="nav-link" href="{{ url('/') }}">User</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Post</a>
+                    <a class="nav-link" href="{{ route('post.index') }}">Post</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}">Login</a>
@@ -81,7 +81,7 @@
                     <a class="nav-link" href="{{ url('/') }}">User</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Post</a>
+                    <a class="nav-link" href="{{ route('post.index') }}">Post</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}">Login</a>
