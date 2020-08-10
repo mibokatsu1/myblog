@@ -134,5 +134,6 @@
   </div>
 
   <script src="{{ asset('js/app.js') }}" defer></script>
+  <!-- <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst'> -->
 </body>
 </html>
