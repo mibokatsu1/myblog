@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use cebe\markdown\Markdown as Markdown;
+// use cebe\markdown\Markdown as Markdown;
 
 class Post extends Model
 {
