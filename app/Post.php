@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use cebe\markdown\Markdown as Markdown;
 
 class Post extends Model
 {
@@ -15,4 +16,17 @@ class Post extends Model
     public function user() {
         return $this->belongsTo('App\User');
     }
+
+    // formのmarkdownをパースする
+    // public function parse()
+    // {
+    //     $parser = new Markdown();
+
+    //     return $parser->parse($this->message);
+    // }
+
+    // public function getMarkdownBodyAttribute()
+    // {
+    //     return $this->parse();
+    // }
 }

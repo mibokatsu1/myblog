@@ -27,7 +27,8 @@ class PostController extends Controller
         // $items = Post::all();
         // $items = Post::orderBy('id', 'desc')->get();
         // 「Post::all();」ではN+1問題発生する
-
+        // dd(__METHOD__);  ヘルパー関数
+        // dd($items);
         $params = [
             'authUser' => $authUser,
             'items' => $items,
