@@ -5,7 +5,7 @@
     @php
         $converter = new \cebe\markdown\MarkdownExtra();
         $item->message = $converter->parse($item->message);
-   @endphp  
+    @endphp
     @if($item !== '')
         <div class="headcopy">Title</div><hr>
         <div class="text">{{ $item->title }}</div>

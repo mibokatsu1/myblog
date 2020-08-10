@@ -58,8 +58,13 @@
                                 <div class="alert alert-primary" role="alert">
                                     <div class="comment">
                                         <a href="/post/{{ $item->id }}" class="alert-link">{{ $item->title }}</a>
-                                        <br />
-                                            {{ $item->message }}
+                                        <br/>
+                                        @php
+                                            $converter = new \cebe\markdown\MarkdownExtra();
+                                            $item->message = $converter->parse($item->message);
+                                        @endphp
+                                        {!! $item->message !!}
+                                        <!-- {{ $item->message }} -->
                                         <div class="created_at">{{ $item->created_at}}</div>
                                     </div>
 
