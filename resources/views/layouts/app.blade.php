@@ -64,13 +64,13 @@
             @guest
             <li class="nav-item">    
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">User</a>
+                    <a class="nav-link" href="{{ url('home') }}">User</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('post.index') }}">Post</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Login</a>
+                    <a class="nav-link" href="{{ url('home') }}">Login</a>
                 </li>
                 @if (Route::has('register'))
                     <li class="nav-item">
@@ -79,33 +79,33 @@
                 @endif
             @else
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">User</a>
+                    <a class="nav-link" href="{{ url('home') }}">User</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('post.index') }}">Post</a>
                 </li>
+                @if(Auth::check())
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Login</a>
+                    <a class="nav-link" href="{{ route('user.logout') }}">Logout</a>
                 </li>
-
+                @endif
                 <li class="nav-item dropdown">
-                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ url('/') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                       {{ Auth::user()->name }} <span class="caret"></span>
                   </a>
 
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     @if(Auth::check())
-                      <li><a href="{{ route('user.logout') }}">ログアウト</a></li>
-                      <!-- <a class="dropdown-item" href="{{ route('logout') }}"
+                      <!-- <li><a href="{{ route('user.logout') }}">ログアウト</a></li> -->
+                      <a class="dropdown-item" href="{{ route('user.logout') }}"
                           onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();">
                           {{ __('Logout') }}
-                      </a> -->
+                      </a>
+                      <form id="logout-form" action="{{ route('user.logout') }}" method="GET">
+                          @csrf
+                      </form>
                     @endif
-
-                    <form id="logout-form" action="{{ url('#') }}" method="POST">
-                        @csrf
-                    </form>
                   </div>
                 </li>
             @endguest
