@@ -50,6 +50,9 @@
                             <input type="submit" class="btn btn-primary btn-sm postBtn" value="投稿する">
                         </div>
                     </form>
+                    <div class="paginate">
+                        {{ $items->links() }}
+                    </div>
 
                     <!-- 記事描画部分 -->
                     <div class="createItem">

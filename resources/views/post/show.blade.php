@@ -36,5 +36,4 @@
         @endif
     @endif
 
-    <a href="/post" class="edit">編集する</a>
 @endsection
