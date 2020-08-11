@@ -50,6 +50,13 @@
                             <input type="submit" class="btn btn-primary btn-sm postBtn" value="投稿する">
                         </div>
                     </form>
+                    <!-- <div class="card-body-2">
+                        <form action="//example.com/upload" method=post id=editor_form data-redirect-url="//example.com/redirect">
+                            ＠csrf
+                            <div id=editor_area contenteditable=true class=editor_area></div>
+                            <input type=submit value="送信" id=submit_button>
+                        </form>
+                    </div> -->
                     <div class="paginate">
                         {{ $items->links() }}
                     </div>

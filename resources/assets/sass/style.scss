@@ -282,3 +282,15 @@ input[class="userForm"]:focus,
 .comment {
   width: 95%;
 }
+
+
+// 追加
+.editor_area {
+  height: auto;
+  min-height: 250px;
+  border: 3px solid #ccc;
+}
+
+.editor_area[data-hover] {
+  border: dashed aqua;
+}

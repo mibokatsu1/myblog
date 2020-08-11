@@ -1,5 +1,7 @@
 require('./bootstrap');
 
+// console.log("ok");
+
 // import Vue from 'vue'
 
 // new Vue({
