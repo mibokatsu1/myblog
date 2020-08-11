@@ -64,13 +64,13 @@
             @guest
             <li class="nav-item">    
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">User</a>
+                    <a class="nav-link" href="{{ url('home') }}">User</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('post.index') }}">Post</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Login</a>
+                    <a class="nav-link" href="{{ url('home') }}">Login</a>
                 </li>
                 @if (Route::has('register'))
                     <li class="nav-item">
@@ -79,7 +79,7 @@
                 @endif
             @else
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">User</a>
+                    <a class="nav-link" href="{{ url('home') }}">User</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('post.index') }}">Post</a>
