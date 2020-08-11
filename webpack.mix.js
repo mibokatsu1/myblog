@@ -22,8 +22,8 @@ mix.browserSync('myblog.test')
    .sass('resources/assets/sass/style.scss', 'public/css')
 
   // assets/sass配下のstyle.scssを、public/css配下にstyle.cssとしてコンパイル
-  // .js('resources/assets/js/app.js', 'public/js')
-  
-  // .js('resources/js/app.js', 'public/js')
+  .js('resources/assets/js/app.js', 'public/js')
+  .js('resources/assets/js/main.js', 'public/js')
+
   // .js('resources/js/bootstrap.js', 'public/js')
   .version();
