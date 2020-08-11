@@ -294,3 +294,53 @@ input[class="userForm"]:focus,
 .editor_area[data-hover] {
   border: dashed aqua;
 }
+
+.links {
+  display: inline-block;
+  margin-left: 100px;
+  & a {
+    margin-right: 5px;
+  }
+}
+.fa-twitter {
+  color: #00acee;
+  font-size: 25px;
+}
+
+.fa-github {
+  font-size: 25px;
+  color: black;
+}
+
+.fa-facebook-square {
+  font-size: 25px;
+  color: #3B5998;
+}
+
+.fa-instagram {
+  font-size: 25px;
+  color: #262626;
+}
+
+.fa-youtube {
+  font-size: 25px;
+  color: #c4302b;
+}
+
+.fa-android {
+  font-size: 25px;
+}
+
+.fa-apple {
+  font-size: 25px;
+}
+
+.fa-google {
+  font-size: 25px;
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+

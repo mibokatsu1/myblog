@@ -118,19 +118,27 @@
     </main>
 
     <!-- フッター -->
-    <div class="test">
-        フッター
-    </div>
-
     <div class="links">
-      <a href="https://laravel.com/docs"><button class='btn btn-default'>Docs</button></a>
+      <a href="https://twitter.com/"><i class="fab fa-twitter">twitter</i></a>
+      <a href="https://github.com"><i class="fab fa-github">GitHub</i></a>
+      <a href="https://ja-jp.facebook.com"><i class="fab fa-facebook-square">facebook</i></a>
+      <a href="https://ja-jp.facebook.com"><i class="fab fa-instagram">Instagram</i></a>
+      <a href="https://www.youtube.com"><i class="fab fa-youtube">youtube</i></a>
+      <!-- <a href="https://www.android.com/intl/ja_jp/"><i class="fab fa-android"></i></a>
+      <a href="https://www.apple.com/jp/"><i class="fab fa-apple"></i></a> -->
+      <a href="https://www.google.com/"><i class="fab fa-google"></i>google</a>
+      <span class="fa-stack" style="color:#4cb10d">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <a href="https://qiita.com/"><i class="fa fa-search fa-stack-1x fa-inverse fa-2x"></i></a>
+      </span>Qiita
+      <!-- <a href="https://laravel.com/docs"><button class='btn btn-default'>Docs</button></a>
       <a href="https://laracasts.com"><button class='btn btn-primary'>Laracasts</button></a>
       <a href="https://laravel-news.com"><button class='btn btn-success'>News</button></a>
       <a href="https://blog.laravel.com"><button class='btn btn-info'>Blog</button></a>
       <a href="https://nova.laravel.com"><button class='btn btn-warning'>Nova</button></a>
       <a href="https://forge.laravel.com"><button class='btn btn-danger'>Forge</button></a>
       <a href="https://vapor.laravel.com"><button class='btn btn-link'>Vapor</button></a>
-      <a href="https://github.com/laravel/laravel"><button class='btn btn-primary'>GitHub</button></a>
+      <a href="https://github.com/laravel/laravel"><button class='btn btn-primary'>GitHub</button></a> -->
     </div>
   </div>
 
