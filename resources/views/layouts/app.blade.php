@@ -137,7 +137,6 @@
   <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
   <!-- <script src="{{ asset('js/main.js') }}" defer></script> -->
   <script src="{{mix('js/app.js')}}"></script>
-  <script src="{{mix('js/main.js')}}"></script>
-  <!-- <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst'> -->
+  <!-- <script src="{{mix('js/main.js')}}"></script> -->
 </body>
 </html>
