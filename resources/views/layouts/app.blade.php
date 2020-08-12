@@ -6,44 +6,19 @@
   <title>{{ config('app.name') }} | @yield('title', 'トップページ')</title>
 
   <!-- Scripts -->
-  
 
   <!-- Fonts -->
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Roboto:400"> -->
-  <!-- <link rel="stylesheet" href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css"> -->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
-  <!-- <link rel="stylesheet" href="https://hypertext-candy.s3-ap-northeast-1.amazonaws.com/posts/vue-laravel-tutorial/app.css"> -->
 
   {{-- CSS --}}
-  <!-- <link href="{{ asset('../assets/sass/style.scss') }}" rel="stylesheet"> -->
-  <!-- <link href="{{ asset('sass/style.scss') }}" rel="stylesheet"> -->
-
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ mix('css/style.css') }}" rel="stylesheet">
-  <!-- <link href="{{ mix('css/style.css') }}" rel="stylesheet"> -->
-  
+
 </head>
 <body>
-  <!-- <div id="app"></div> -->
-
-  <!-- <div id="example">
-    <my-component></my-component>
-  </div> -->
-
-  <!-- コンポーネントの配置 -->
-  <!-- <div id="app">
-      <example-component></example-component>
-  </div> -->
-
-  <!-- <div id="app"> -->
-    <!-- 呼び出しを作成したコンポーネントへ変更する -->
-    <!-- <hello-world-component></hello-world-component>
-  </div> -->
-
-
   <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
       <div class="container">
@@ -131,14 +106,6 @@
           <i class="fa fa-square fa-stack-2x"></i>
           <a href="https://qiita.com/"><i class="fa fa-search fa-stack-1x fa-inverse fa-2x"></i></a>
       </span>Qiita
-      <!-- <a href="https://laravel.com/docs"><button class='btn btn-default'>Docs</button></a>
-      <a href="https://laracasts.com"><button class='btn btn-primary'>Laracasts</button></a>
-      <a href="https://laravel-news.com"><button class='btn btn-success'>News</button></a>
-      <a href="https://blog.laravel.com"><button class='btn btn-info'>Blog</button></a>
-      <a href="https://nova.laravel.com"><button class='btn btn-warning'>Nova</button></a>
-      <a href="https://forge.laravel.com"><button class='btn btn-danger'>Forge</button></a>
-      <a href="https://vapor.laravel.com"><button class='btn btn-link'>Vapor</button></a>
-      <a href="https://github.com/laravel/laravel"><button class='btn btn-primary'>GitHub</button></a> -->
     </div>
   </div>
 

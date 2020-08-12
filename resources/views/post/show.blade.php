@@ -13,11 +13,6 @@
                 <div class="card">
                     <div class="card-header">{{ $item->title }}</div>
                     <div class="card-body">
-                        <!-- <div class="headcopy">Title</div><hr>
-                        <div class="text">{{ $item->title }}</div>
-                        <br> -->
-                        <!-- <div class="headcopy">Message</div><hr> -->
-
                         <div class="text">
                             {!! $item->message !!}
                             <!-- {{ $item->message }} -->

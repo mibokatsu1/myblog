@@ -14,26 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// 動作確認用
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// APIのURL以外のリクエストに対してはindexテンプレートを返す
-// 画面遷移はフロントエンドのVueRouterが制御する
-// Route::get('/{any?}', fn() => view('index'))->where('any', '.+');
-// Route::get('/{any?}', function() {
-//   return view('index')->where('any', '.+');
-// });
-
 // Route::resource('/post', 'PostController');
 // トップページへアクセスする時にユーザー登録の認証をつける
 Route::resource('/post', 'PostController')->middleware('auth');
-
-// testビューにて＠sectionの挙動確認
-// Route::get('/post', function () {
-//   return view('layouts.app');
-// });
 
 // testビューにて＠sectionの挙動確認
 // Route::get('/test', function () {
@@ -48,11 +31,7 @@ Route::resource('/post', 'PostController')->middleware('auth');
 // Route::get('post/edit/{post_id}', 'PostController@edit')->name('post.edit'); // 編集
 // Route::put('post/{post_id}', 'PostController@update')->name('post.update'); // 更新
 // Route::delete('post/{post_id}', 'PostController@destroy')->name('post.destroy'); // 削除
+
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-
-// Route::post('/login', 'LoginController@login')->name('login');
-
-// Route::post('/logout', 'LoginController@logout')->name('logout');
 Route::get('/logout', 'UserController@getLogout')->name('user.logout');
