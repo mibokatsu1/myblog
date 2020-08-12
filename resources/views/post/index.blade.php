@@ -59,7 +59,7 @@
                         </form>
                     </div> -->
                     <div class="paginate">
-                        {{ $items->links() }}
+                        {{ $items->links('pagination::default') }}
                     </div>
 
                     <!-- 記事描画部分 -->
@@ -99,7 +99,7 @@
                         @endif
                     </div>
                     <div class="paginate">
-                        {{ $items->links() }}
+                        {{ $items->links('pagination::default') }}
                     </div>
                 </div>
             </div>

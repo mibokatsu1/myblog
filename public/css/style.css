@@ -92,6 +92,7 @@ input[class=userForm]:focus,
   border-radius: 3px;
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
 }
 
 .btn-square-emboss:active {
@@ -147,14 +148,9 @@ input[class=userForm]:focus,
   border: dashed aqua;
 }
 
-.paginate span:active {
-  background-color: gray !important;
-  border-color: gray !important;
-}
-
 .links {
   display: inline-block;
-  margin-left: 300px;
+  margin-left: 150px;
 }
 
 .links a {
