@@ -61,7 +61,7 @@ textarea:focus {
 }
 
 .labelTitle {
-  color: #006DD9;
+  color: #697282;
   margin: 20px 0 5px 0;
 }
 
@@ -145,6 +145,11 @@ input[class=userForm]:focus,
 
 .editor_area[data-hover] {
   border: dashed aqua;
+}
+
+.paginate span:active {
+  background-color: gray !important;
+  border-color: gray !important;
 }
 
 .links {

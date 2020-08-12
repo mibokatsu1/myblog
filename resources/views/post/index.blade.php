@@ -23,7 +23,7 @@
                         @endif
                         <input type="text" class="form" name="title" placeholder="タイトル" value="{{ old('title') }}"> -->
                         <div class="">
-                            <div class="labelTitle">タイトル</div>
+                            <div class="labelTitle">Title</div>
                             <input id="title" type="text" class="userForm" name="title" placeholder="タイトル" value="{{ old('title') }}">
                             @if($errors->has('title'))
                                 <div class="error_msg">{{ $errors->first('title') }}</div>
@@ -38,7 +38,7 @@
                             <textarea class="form" name="message" placeholder="メッセージ">{{ old('message') }}</textarea>
                         </div> -->
                         <div class="">
-                            <div class="labelTitle">メッセージ</div>
+                            <div class="labelTitle">Message</div>
                             <textarea id="message" class="userForm" name="message" placeholder="メッセージ">{{ old('message') }}</textarea>
                             @if($errors->has('message'))
                                 <div class="error_msg">{{ $errors->first('message') }}</div>

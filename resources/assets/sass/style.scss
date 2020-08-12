@@ -228,7 +228,7 @@ textarea:focus {
 }
 
 .labelTitle {
-  color: #006DD9;
+  color: #697282;;
   margin: 20px 0 5px 0;
 }
 
@@ -315,6 +315,46 @@ input[class="userForm"]:focus,
   border: dashed aqua;
 }
 
+.paginate {
+  & span:active {
+    background-color: gray !important;
+    border-color: gray !important;
+  }
+}
+
+// .paginate
+// {
+//   & li {
+//     & a {
+//       background-color: white;
+//       color: #5A4181;
+//     }
+//     & a:focus, a:hover, span:focus, span:hover {
+//       color: #5a5a5a;
+//       background-color: #eee;
+//       border-color: #ddd;
+//     }
+//   }
+// }
+
+// .pagination.active
+// {
+//   & a {
+//     color: white;
+//     background-color: #5A4181 !Important;
+//     border: solid 1px #5A4181 !Important;
+//   }
+// }
+
+// .pagination.active
+// {
+//   & a:hover {
+//     background-color: #5A4181 !Important;
+//     border: solid 1px #5A4181;
+//   }
+// }
+
+// footer
 .links {
   display: inline-block;
   margin-left: 300px;
