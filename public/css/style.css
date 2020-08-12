@@ -1,27 +1,5 @@
 @charset "UTF-8";
 
-.form_edit {
-  font-size: 15px;
-  width: 100%;
-  margin: 10px auto 10px;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  box-sizing: border-box;
-  box-shadow: 0 0 7px rgba(51, 153, 0, 0.4);
-  transition: 1s;
-}
-
-.form_edit:last-child {
-  margin-bottom: 20px;
-}
-
-.form_edit:focus {
-  background: #d4edda;
-  outline: 2px solid #89df9c;
-}
-
 input[type=text] {
   height: 35px;
 }
@@ -121,7 +99,7 @@ input[class=userForm]:focus,
 }
 
 .deleteIcon {
-  color: #006DD9;
+  color: #b87db4;
   font-size: 20px;
   border: none;
   background: none;
@@ -139,6 +117,32 @@ input[class=userForm]:focus,
 
 .comment {
   width: 95%;
+}
+
+.form_edit {
+  font-size: 15px;
+  width: 100%;
+  margin: 10px auto 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 7px rgba(51, 153, 0, 0.4);
+  transition: 1s;
+}
+
+.form_edit:last-child {
+  margin-bottom: 20px;
+}
+
+.form_edit:focus {
+  background: #d4edda;
+  outline: 2px solid #89df9c;
+}
+
+.updateBtn {
+  text-align: center;
 }
 
 .editor_area {

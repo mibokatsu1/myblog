@@ -37,8 +37,10 @@
                                 <!-- <textarea class="form_edit" name="message" placeholder="メッセージ">{{ $item->message }}</textarea> -->
                                 </textarea>
                             </div>
-                            <input type="hidden" name="_method" value="PUT">
-                            <input type="submit" class="update" value="変　更">
+                                <div class="updateBtn">
+                                    <input type="hidden" name="_method" value="PUT">
+                                    <input type="submit" class="btn-square-emboss update" value="変　更">
+                                </div>
                         </form>
                         @endif
                     </div>
