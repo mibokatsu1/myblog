@@ -109,7 +109,7 @@
 // }
 
 .form {
-  color: #4169e1;
+  color: #155724;
   font-size: 12px;
   width: 100%;
   margin: 10px auto 10px;
@@ -118,7 +118,7 @@
   outline: none;
   border-radius: 10px;
   box-sizing: border-box;
-  box-shadow: 0 0 3px rgba(65,105,255,0.4);
+  box-shadow: 0 0 3px rgba(51, 153, 0, 0.4);
 }
 
 .form:last-child {
@@ -142,34 +142,34 @@ textarea:focus {
   height: 150px;
 }
 
-input[class=create] {
-  width: 100%;
-  font-size: 15px;
-  font-weight: 100;
-  color: #fff;
-  margin: 0 auto 50px;
-  padding: 5px 0 5px 0;
-  background: #6495ed;
-  border:1px solid #4169e1;
-  border-radius: 5px;
-  box-sizing: border-box;
-  transition: 1s;
-}
+// input[class=create] {
+//   width: 100%;
+//   font-size: 15px;
+//   font-weight: 100;
+//   color: #fff;
+//   margin: 0 auto 50px;
+//   padding: 5px 0 5px 0;
+//   background: #6495ed;
+//   border:1px solid #4169e1;
+//   border-radius: 5px;
+//   box-sizing: border-box;
+//   transition: 1s;
+// }
 
-input[class=create]:hover {
-  box-shadow: 0 0 7px #4169e1;
-  opacity: .7;
-}
+// input[class=create]:hover {
+//   box-shadow: 0 0 7px #4169e1;
+//   opacity: .7;
+// }
 
-input[class=delete] {
-  font-size: 13px;
-  font-weight: 100;
-  // color: #4169e1;
-  margin: 5px 0 0 0;
-  padding: 0 3px;
-  // background: none;
-  // border: none;
-}
+// input[class=delete] {
+//   font-size: 13px;
+//   font-weight: 100;
+//   color: #4169e1;
+//   margin: 5px 0 0 0;
+//   padding: 0 3px;
+//   background: none;
+//   border: none;
+// }
 
 // img.add {
 //   width: 35px;
@@ -297,7 +297,7 @@ input[class="userForm"]:focus,
 
 .links {
   display: inline-block;
-  margin-left: 100px;
+  margin-left: 300px;
   & a {
     margin-right: 5px;
   }

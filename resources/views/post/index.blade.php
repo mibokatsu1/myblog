@@ -65,7 +65,7 @@
                     <div class="createItem">
                         @if(count($items) > 0)
                             @foreach($items as $item)
-                                <div class="alert alert-primary" role="alert">
+                                <div class="alert alert-success" role="alert">
                                     <div class="comment">
                                         <a href="/post/{{ $item->id }}" class="alert-link">{{ $item->title }}</a>
                                         <br/>
