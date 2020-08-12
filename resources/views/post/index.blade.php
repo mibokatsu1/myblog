@@ -47,7 +47,8 @@
 
                         <!-- <input type="submit" class="create" value="投  稿"> -->
                         <div class="buttonSet">
-                            <input type="submit" class="btn btn-primary btn-sm postBtn" value="投稿する">
+                            <input type="submit" class="btn-square-emboss" value="SEND">
+                            <!-- <input type="submit" class="btn btn-primary btn-sm postBtn" value="投稿する"> -->
                         </div>
                     </form>
                     <!-- <div class="card-body-2">
