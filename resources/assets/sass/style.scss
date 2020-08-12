@@ -108,9 +108,8 @@
 //   margin: 10px 0 0 0;
 // }
 
-.form {
-  color: #155724;
-  font-size: 12px;
+.form_edit {
+  font-size: 15px;
   width: 100%;
   margin: 10px auto 10px;
   padding: 10px;
@@ -118,15 +117,17 @@
   outline: none;
   border-radius: 10px;
   box-sizing: border-box;
-  box-shadow: 0 0 3px rgba(51, 153, 0, 0.4);
+  box-shadow: 0 0 7px rgba(51, 153, 0, 0.4);
+  transition: 1s;
 }
 
-.form:last-child {
+.form_edit:last-child {
   margin-bottom: 20px;
 }
 
-.form:focus {
-  box-shadow: 0 0 7px #4169e1;
+.form_edit:focus {
+  background: #d4edda;
+  outline: 2px solid #89df9c;
 }
 
 input[type=text] {
@@ -142,66 +143,6 @@ textarea:focus {
   height: 150px;
 }
 
-// input[class=create] {
-//   width: 100%;
-//   font-size: 15px;
-//   font-weight: 100;
-//   color: #fff;
-//   margin: 0 auto 50px;
-//   padding: 5px 0 5px 0;
-//   background: #6495ed;
-//   border:1px solid #4169e1;
-//   border-radius: 5px;
-//   box-sizing: border-box;
-//   transition: 1s;
-// }
-
-// input[class=create]:hover {
-//   box-shadow: 0 0 7px #4169e1;
-//   opacity: .7;
-// }
-
-// input[class=delete] {
-//   font-size: 13px;
-//   font-weight: 100;
-//   color: #4169e1;
-//   margin: 5px 0 0 0;
-//   padding: 0 3px;
-//   background: none;
-//   border: none;
-// }
-
-// img.add {
-//   width: 35px;
-//   background: #fff;
-//   padding: 5px;
-//   box-sizing: border-box;
-//   border-radius: 50%;
-//   position: absolute;
-//   top: 5px;
-//   right: 5px;
-//   transition: .5s;
-// }
-
-// img.add:hover {
-//   box-shadow: 0 0 7px #4169e1;
-//   opacity: .7;
-// }
-
-// .headcopy {
-//   color: #ccc;
-//   font-size: 15px;
-//   font-weight: bold;
-//   margin: 0 0 -6px 0;
-// }
-
-// .text {
-//   font-size: 15px;
-//   margin: 10px 0 20px 0;
-// }
-
-
-// 以下追加
 
 .topWrapper {
   width: 150px;
@@ -235,6 +176,7 @@ textarea:focus {
 input[class="userForm"],
 .userForm {
   width: 100%;
+  font-size: 15px;
   padding: 5px 0 5px 10px;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -242,7 +184,9 @@ input[class="userForm"],
 }
 input[class="userForm"]:focus,
 .userForm:focus {
-  background: #87ceeb;
+  background: #d4edda;
+  outline: 2px solid #89df9c;
+  // border: 1px solid #c3e6cb;
 }
 
 .btn-square-emboss {

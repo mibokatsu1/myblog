@@ -24,10 +24,10 @@
             <!-- 認証ユーザーのid取得 -->
             <input type="hidden" name="user_id" value="{{ $authUser->id }}">
             <!-- <input type="hidden" name="user_id" value="1"> -->
-            <input type="text" class="form" name="title" placeholder="タイトル" value="{{ $item->title }}">
+            <input type="text" class="form_edit" name="title" placeholder="タイトル" value="{{ $item->title }}">
             <div>
-                <textarea class="form" name="message" placeholder="メッセージ">{!! $item->message !!}</textarea>
-                <!-- <textarea class="form" name="message" placeholder="メッセージ">{{ $item->message }}</textarea> -->
+                <textarea class="form_edit" name="message" placeholder="メッセージ">{!! $item->message !!}</textarea>
+                <!-- <textarea class="form_edit" name="message" placeholder="メッセージ">{{ $item->message }}</textarea> -->
                 </textarea>
             </div>
             <input type="hidden" name="_method" value="PUT">

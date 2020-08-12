@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
-.form {
-  color: #155724;
-  font-size: 12px;
+.form_edit {
+  font-size: 15px;
   width: 100%;
   margin: 10px auto 10px;
   padding: 10px;
@@ -10,15 +9,17 @@
   outline: none;
   border-radius: 10px;
   box-sizing: border-box;
-  box-shadow: 0 0 3px rgba(51, 153, 0, 0.4);
+  box-shadow: 0 0 7px rgba(51, 153, 0, 0.4);
+  transition: 1s;
 }
 
-.form:last-child {
+.form_edit:last-child {
   margin-bottom: 20px;
 }
 
-.form:focus {
-  box-shadow: 0 0 7px #4169e1;
+.form_edit:focus {
+  background: #d4edda;
+  outline: 2px solid #89df9c;
 }
 
 input[type=text] {
@@ -68,6 +69,7 @@ textarea:focus {
 input[class=userForm],
 .userForm {
   width: 100%;
+  font-size: 15px;
   padding: 5px 0 5px 10px;
   box-sizing: border-box;
   border: 1px solid #ccc;
@@ -76,7 +78,8 @@ input[class=userForm],
 
 input[class=userForm]:focus,
 .userForm:focus {
-  background: #87ceeb;
+  background: #d4edda;
+  outline: 2px solid #89df9c;
 }
 
 .btn-square-emboss {
