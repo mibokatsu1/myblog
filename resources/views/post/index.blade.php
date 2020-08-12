@@ -76,7 +76,7 @@
                                         @endphp
                                         {!! $item->message !!}
                                         <!-- {{ $item->message }} -->
-                                        <div class="created_at">{{ $item->created_at}}</div>
+                                        <div class="created_at">{{ $item->created_at->format('Y/m/d H:i')}}</div>
                                     </div>
 
                                     <!-- 主キーと外部キーが同じ場合 -> リンク付きテキストと削除ボタン表示 -->
