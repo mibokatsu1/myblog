@@ -1,6 +1,6 @@
 @if ($paginator->hasPages())
     <nav>
-        <ul class="pagination justify-content-center pagination">
+        <ul class="pagination justify-content-center">
             {{-- Previous Page Link --}}@cannot('update', Model::class)
 
             @endcannot
