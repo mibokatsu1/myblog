@@ -164,8 +164,7 @@ input[class=userForm]:focus,
 }
 
 .links {
-  display: inline-block;
-  margin-left: 150px;
+  text-align: center;
 }
 
 .links a {
@@ -175,34 +174,41 @@ input[class=userForm]:focus,
 .fa-twitter {
   color: #00acee;
   font-size: 25px;
+  display: inline-block;
 }
 
 .fa-github {
   font-size: 25px;
   color: black;
+  display: inline-block;
 }
 
 .fa-facebook-square {
   font-size: 25px;
   color: #3B5998;
+  display: inline-block;
 }
 
 .fa-instagram {
   font-size: 25px;
   color: #262626;
+  display: inline-block;
 }
 
 .fa-youtube {
   font-size: 25px;
   color: #c4302b;
+  display: inline-block;
 }
 
 .fa-android {
   font-size: 25px;
+  display: inline-block;
 }
 
 .fa-apple {
   font-size: 25px;
+  display: inline-block;
 }
 
 .fa-google {
@@ -212,5 +218,6 @@ input[class=userForm]:focus,
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
