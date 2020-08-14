@@ -33,16 +33,16 @@ Qiitaなどの技術ブログは、技術情報の共有、発信の目的とし
 
 ## DEMO
 <img width="1131" alt="promo1" src="https://user-images.githubusercontent.com/66307448/90219453-0b2d9a80-de41-11ea-9438-06c031334243.png">
-<img width="1131" alt="promo2" src="https://user-images.githubusercontent.com/66307448/90221509-4336dc80-de45-11ea-8bb5-bada0ac0ce6c.gif">
+<img width="1131" alt="promo2" src="https://user-images.githubusercontent.com/66307448/90238882-9d459b00-de61-11ea-824a-e01f8c8d00e1.gif">
 
 ## 工夫したポイント
 - 自分のプログラミング学習のアウトプットようとして、使いやすい様にマークダウン記法の採用は優先順位が高い機能でした。<br>
-- メモ用途がメインとなるため、スマホでも閲覧、書き込みが可能になるようレスポンシブデザインにしました。<br>
-- ページに接続して直ぐにメモが取れる様に、トップ画面のみで新規投稿と投稿の一覧表示のを両方行える画面構成にしました。<br>
+- メモ用途がメインとなるため、スマホでも閲覧、書き込み出来る様にレスポンシブデザインにしました。<br>
+- 本アプリのページに接続して直ぐにメモが作成できる様に、トップ画面のみで新規投稿と投稿の一覧表示のを両方行える画面構成にしました。<br>
 - 学習内容を閲覧しやすい様に、デザインはシンプルにしました。
 
 ## 使用技術（開発環境）
-PHP/Laravel/Composer/Laravel Valet/Haml/Sass/PostgreSQL/Github/Heroku/Visual Studio Code <br>
+PHP/Laravel/Composer/Laravel Valet/HTML/Sass/PostgreSQL/Github/Heroku/Visual Studio Code <br>
 - PHP 7.3.20 <br>
 - Homebrew	2.4.9 <br>
 - Composer　1.10.9 <br>
@@ -61,96 +61,21 @@ PHP/Laravel/Composer/Laravel Valet/Haml/Sass/PostgreSQL/Github/Heroku/Visual Stu
 
 |Column|Type|Options|
 |------|----|-------|
-|email|integer|null: false|
-|password|integer|null: false|
+|email|string|null: false|
+|password|string|null: false|
 |name|string|null: false|
-|password confirmation|integer|null: false|
-|image|text|
+|password confirmation|string|null: false|
 
 #### Association
-- has_many :group_users
-- has_many :tag_users
-- has_many :groups, through: :group_users
-- has_many :tags, through: :tag_users
-- has_many :messages
+- has_many :posts
 
-### groupsテーブル
+### Postsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-
-#### Association
-- has_many :group_users
-- has_many :tag-groups
-- has_many :users, through: :group_users
-- has_many :tags, through: :tag-groups
-- has_many :messages
-
-### messagesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|text|text||
-|image|text||
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-#### Association
-- belongs_to :group
-- belongs_to :user
-
-### all_users_chatsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|name|string||
-|image|string||
+|title|string||
+|message|text||
 |user_id|integer|null: false, foreign_key: true|
 
 #### Association
-- has_many :comments
 - belongs_to :user
-
-### commentsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|content|string||
-|image|string||
-|user_id|integer|null: false, foreign_key: true|
-|all_users_chat_id|integer|null: false, foreign_key: true|
-
-#### Association
-- belongs_to :all_users_chat
-- belongs_to :user
-
-### tag_usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|tag_id|integer|null: false, foreign_key: true|
-
-#### Association
-- belongs_to :tag
-- belongs_to :user
-
-### taggingsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|tag_id|integer|null: false, foreign_key: true|
-|taggable_id|integer|null: false, foreign_key: true|
-
-#### Association
-- belongs_to :tag
-- belongs_to :all_users_chat
-
-### tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-
-#### Association
-- has_many :taggings
-- has_many :all_users_chats, through: :taggings
