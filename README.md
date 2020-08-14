@@ -21,7 +21,7 @@ Qiitaなどの技術ブログは、技術情報の共有、発信の目的とし
 自身が日々学んだことをディテールに拘らず、自由に書き留めておけるメモアプリが欲しくて作りました。
 
 ### 制作前の構想
-テックキャンプではRuby on Railsを用いてアプリ作成を学んだので、アプリ2作目は別の言語を独学で学んでアプリ実装にチャレンジしたいと思いました。
+プログラミングスクールのテックキャンプではRuby on Railsを用いてアプリ作成を学んだので、アプリ2作目は別の言語を独学で学んでアプリ実装にチャレンジしたいと思いました。
 - プログラミング言語は求人募集の多いものを選ぶ ->　PHPを採用 <br>
 - 実戦で生かせるようにフレームワークを使用する <br>
 - フレームワークはWEB制作アプリとして人気の高いものを選ぶ <br>
@@ -33,40 +33,29 @@ Qiitaなどの技術ブログは、技術情報の共有、発信の目的とし
 
 ## DEMO
 <img width="1131" alt="promo1" src="https://user-images.githubusercontent.com/66307448/90219453-0b2d9a80-de41-11ea-9438-06c031334243.png">
-![promo2](https://user-images.githubusercontent.com/66307448/90221509-4336dc80-de45-11ea-8bb5-bada0ac0ce6c.gif)
 <img width="1131" alt="promo2" src="https://user-images.githubusercontent.com/66307448/90221509-4336dc80-de45-11ea-8bb5-bada0ac0ce6c.gif">
 
 ## 工夫したポイント
-全体公開チャットは2ch等の掲示板を意識していますが、キーワードやタイトルだけで記事の魅力を伝えるよりも、<br>
-記事に関連する特徴的な画像をピックアップ画面としてトップページに表示することで、利用者に魅力が伝わりやすく、見た目も華やかになると思い実装しました。<br>
-同様の観点からユーザーのアバター画像も付けました。
+- 自分のプログラミング学習のアウトプットようとして、使いやすい様にマークダウン記法の採用は優先順位が高い機能でした。<br>
+- メモ用途がメインとなるため、スマホでも閲覧、書き込みが可能になるようレスポンシブデザインにしました。<br>
+- ページに接続して直ぐにメモが取れる様に、トップ画面のみで新規投稿と投稿の一覧表示のを両方行える画面構成にしました。<br>
+- 学習内容を閲覧しやすい様に、デザインはシンプルにしました。
 
 ## 使用技術（開発環境）
-Ruby/Ruby on Rails/JavaScript/jQuery/Haml/Sass/MySQL/Github/AWS/Visual Studio Code <br>
-* Ruby 2.6.5 <br>
-* Ruby on Rails 6.0.0 <br>
-* gem 'devise' <br>
-* gem 'Capistrano' 3.14.1 <br>
-* gem 'acts-as-taggable-on'
+PHP/Laravel/Composer/Laravel Valet/Haml/Sass/PostgreSQL/Github/Heroku/Visual Studio Code <br>
+- PHP 7.3.20 <br>
+- Homebrew	2.4.9 <br>
+- Composer　1.10.9 <br>
+- Laravel Valet  2.11.0 <br>
+- Laravel Mix <br>
+- PostgreSQL　12.3 <br>
 
 ## 今後実装したい機能
-* 検索機能の拡張<br>
-* 動画の投稿<br>
-* 見た目を格好良くJavaScriptで装飾する<br>
+* 検索機能 <br>
+* 1つの投稿内で複数の画像を任意の位置に挿入する <br>
 * リファクタリング（DRY原則）
 
 ## DB設計
-
-### user_groupsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-#### Association
-- belongs_to :group
-- belongs_to :user
 
 ### usersテーブル
 
