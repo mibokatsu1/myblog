@@ -34,7 +34,7 @@ Qiitaなどの技術ブログは、技術情報の共有、発信の目的とし
 ## DEMO
 
 
-![demo1](images/promo1.png)
+<img width="1131" alt="promo1" src="https://user-images.githubusercontent.com/66307448/90219453-0b2d9a80-de41-11ea-9438-06c031334243.png">
 ![demo2](app/assets/images/promo2.png)
 ![demo3](app/assets/images/promo3.png)
 
