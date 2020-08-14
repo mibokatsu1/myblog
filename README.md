@@ -33,7 +33,8 @@ Qiitaなどの技術ブログは、技術情報の共有、発信の目的とし
 
 ## DEMO
 <img width="1131" alt="promo1" src="https://user-images.githubusercontent.com/66307448/90219453-0b2d9a80-de41-11ea-9438-06c031334243.png">
-![promo2](https://user-images.githubusercontent.com/66307448/90220400-17b2f280-de43-11ea-9902-0d0771b5b4ba.gif)
+![promo2](https://user-images.githubusercontent.com/66307448/90221183-aecc7a00-de44-11ea-886e-fd15071aabe7.gif)
+<img width="1131" alt="promo2" src="https://user-images.githubusercontent.com/66307448/90221183-aecc7a00-de44-11ea-886e-fd15071aabe7.gif">
 
 ## 工夫したポイント
 全体公開チャットは2ch等の掲示板を意識していますが、キーワードやタイトルだけで記事の魅力を伝えるよりも、<br>
