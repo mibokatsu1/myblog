@@ -34,7 +34,7 @@ Qiitaなどの技術ブログは、技術情報の共有、発信の目的とし
 ## DEMO
 
 
-![demo1](app/assets/images/promo1.png)
+![demo1](https://raw.githubusercontent.com/mibokatsu1/myblog/images/promo1.png)
 ![demo2](app/assets/images/promo2.png)
 ![demo3](app/assets/images/promo3.png)
 
