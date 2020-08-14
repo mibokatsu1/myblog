@@ -1,19 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="checkAdd">
 @if(Auth::check())
 <!--認証中なら-->
-<a href="{{ route('user.logout') }}" class="add" alt="ログアウト">ログアウト</a>
+    <a href="{{ route('user.logout') }}" class="add" alt="ログアウト">ログアウト</a>
 @else
 <!--未認証なら-->
-<a href="{{route('register')}}" class="add" alt="ユーザー登録">ユーザー登録</a>
+    <a href="{{route('register')}}" class="add addUser" alt="ユーザー登録">新しくユーザー登録する</a>
 @endif
-
+</div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">{{ __('登録済みのアカウントでログイン') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -53,7 +54,7 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                                        {{ __('IDとパスワードを覚えておく') }}
                                     </label>
                                 </div>
                             </div>
@@ -67,7 +68,7 @@
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                        {{ __('パスワードを忘れた方はこちら') }}
                                     </a>
                                 @endif
                             </div>
