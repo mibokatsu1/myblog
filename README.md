@@ -34,7 +34,7 @@ Qiitaなどの技術投稿サイトは、技術情報の共有、発信を目的
 
 ## DEMO
 <img width="1131" alt="promo1" src="https://user-images.githubusercontent.com/66307448/90219453-0b2d9a80-de41-11ea-9438-06c031334243.png">
-<img width="1131" alt="promo2" src="https://user-images.githubusercontent.com/66307448/90238882-9d459b00-de61-11ea-824a-e01f8c8d00e1.gif">
+<img width="1131" alt="promo2" src="https://user-images.githubusercontent.com/66307448/90308162-13a4d480-df18-11ea-9708-0b1c3e732879.gif">
 
 ## 工夫したポイント
 - 自分のプログラミング学習のアウトプットようとして、使いやすい様にマークダウン記法の採用は優先順位が高い機能でした。<br>
