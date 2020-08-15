@@ -97,7 +97,7 @@
       <a href="https://twitter.com/"><i class="fab fa-twitter">twitter</i></a>
       <a href="https://github.com"><i class="fab fa-github">GitHub</i></a>
       <a href="https://ja-jp.facebook.com"><i class="fab fa-facebook-square">facebook</i></a>
-      <a href="https://ja-jp.facebook.com"><i class="fab fa-instagram">Instagram</i></a>
+      <a href="https://www.instagram.com/?hl=ja"><i class="fab fa-instagram">Instagram</i></a>
       <a href="https://www.youtube.com"><i class="fab fa-youtube">youtube</i></a>
       <!-- <a href="https://www.android.com/intl/ja_jp/"><i class="fab fa-android"></i></a>
       <a href="https://www.apple.com/jp/"><i class="fab fa-apple"></i></a> -->
