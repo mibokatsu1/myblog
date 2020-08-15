@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 // Route::resource('/post', 'PostController');
 // トップページへアクセスする時にユーザー登録の認証をつける
 Route::resource('/post', 'PostController')->middleware('auth');
-
+Route::resource('/', 'PostController')->middleware('auth');
 // testビューにて＠sectionの挙動確認
 // Route::get('/test', function () {
 //   return view('test.test_child');
@@ -33,5 +33,5 @@ Route::resource('/post', 'PostController')->middleware('auth');
 // Route::delete('post/{post_id}', 'PostController@destroy')->name('post.destroy'); // 削除
 
 Auth::routes();
-Route::get('/', 'HomeController@index')->name('home');
+// Route::get('/', 'HomeController@index')->name('home');
 Route::get('/logout', 'UserController@getLogout')->name('user.logout');
