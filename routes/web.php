@@ -33,5 +33,5 @@ Route::resource('/post', 'PostController')->middleware('auth');
 // Route::delete('post/{post_id}', 'PostController@destroy')->name('post.destroy'); // 削除
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/logout', 'UserController@getLogout')->name('user.logout');
