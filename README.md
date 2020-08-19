@@ -40,8 +40,8 @@ Qiitaなどの技術投稿サイトは、技術情報の共有、発信を目的
 - 同様の理由でDBはPostgreSQL、本番環境はHerokuに決定
 
 ## DEMO
-<img width="1131" alt="promo1" src="https://user-images.githubusercontent.com/66307448/90219453-0b2d9a80-de41-11ea-9438-06c031334243.png">
-<img width="1131" alt="promo2" src="https://user-images.githubusercontent.com/66307448/90308162-13a4d480-df18-11ea-9708-0b1c3e732879.gif">
+<img width="1143" alt="promo1" src="https://user-images.githubusercontent.com/66307448/90592913-a946a980-e221-11ea-972c-d0dd358e89b7.png">
+<img width="1131" alt="promo2" src="https://user-images.githubusercontent.com/66307448/90592723-3a695080-e221-11ea-9c27-bf63c95f6f3b.gif">
 
 ## 工夫したポイント
 - 自分のプログラミング学習のアウトプットようとして、使いやすい様にマークダウン記法の採用は優先順位が高い機能でした。<br>
