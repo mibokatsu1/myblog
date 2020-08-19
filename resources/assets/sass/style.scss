@@ -173,6 +173,16 @@ input[class="userForm"]:focus,
   border: dashed aqua;
 }
 
+pre {
+  padding: 1em;
+  background-color:#f0fff0;
+  color :#b87db4;
+}
+
+code {
+  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
 // footer
 .links {
   margin-top: 50px;
